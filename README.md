@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PankhAI — NGO Campaign Coprocessor & Trust Budgeting Suite
 
-## Getting Started
+PankhAI is a tailored administrative console and generative workspace designed for the volunteers and coordinators of **NayePankh Foundation** (a registered, tax-exempt NGO in India dedicated to uplifting underprivileged communities). 
 
-First, run the development server:
+PankhAI bridges the gap between grassroots charity work, generative copywriting, and donor transparency by providing volunteers with a set of tools to craft campaigns, analyze budget trust models, interact with an AI volunteer assistant, and maintain coordinator directories.
+
+---
+
+## 🌟 Core Features
+
+### 1. Outreach Copywriting Generator
+- **Generative Copy Editor**: Allows coordinators to input target demographics (e.g. general public, corporate sponsors), select causes (e.g., child education, food drive, hygiene camp), choose a campaign tone (e.g., urgent, professional, inspiring), and instantly generate conversion-optimized fundraising copy.
+- **Copy Actions**: Copy generated results directly to clipboard or trigger mail-sender simulation tools.
+
+### 2. Volunteer Support Chatbot
+- **Intelligent Assistant**: An interactive AI chat console designed to answer coordinator queries, guide donor relation calls, suggest marketing messaging strategy, and explain tax exemption benefits (e.g., Section 80G deductions under Indian Income Tax).
+
+### 3. Impact Analytics & Transparency Engine
+- **Trust Budgeting Suite**: Enables volunteers to build public-facing transparent budget projections.
+- **Data Visualization**: Employs interactive charts (via Recharts) displaying transparency indicators, allocation splits (e.g., logistics vs. direct aid), and volunteer mobilization indicators.
+- **Clean Reports**: Provides breakdown matrices detailing how every single rupee donated directly impacts the target audience.
+
+### 4. Members Directory
+- **Coordinator Board**: A listing directory mapping volunteer coordinates, registration IDs, assigned campaigns, and active statuses across operations in Kanpur, Ghaziabad, and Kanpur suburbs.
+
+---
+
+## 🎨 Branding & Design Guidelines
+
+PankhAI's UI features a dual-theming layout:
+- **Public & Authentication Portal**: Implements a clean, vibrant, light theme styled in compliance with the visual identity of `https://nayepankh.com/`. Uses floating color blurs (`saffron` and `emerald`), white card glassmorphism panel styles, and features the official **NayePankh Logo** (`/assets/naypankhlogo.png`).
+- **Administrative Console (Post-Login Dashboard)**: Adopts a premium, high-density dark console interface focusing on data visual readability.
+- **Custom Footer**: Incorporates a branding footer outlining corporate contacts (`contact@nayepankh.com` / `+91-8318500748`), social SVG icons (Instagram, LinkedIn, YouTube, Facebook, X), and regulatory navigation lists.
+
+### Primary Color Assets
+- **Saffron/Orange (Primary Accent)**: `#F15B25` / `#F97316`
+- **Emerald/Green (Secondary Accent)**: `#10B981` / `#198754`
+- **Brand Blue**: `#1A82C3` / `#0A58CA`
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+- **Framework**: Next.js 15+ (App Router, Client & Server Components, Suspense boundary patterns)
+- **Styling**: Tailwind CSS (v4) with vanilla variables custom-injected
+- **Backend & Auth**: Supabase Database & Supabase Auth Client
+- **Charts**: Recharts (ResponsiveContainer, PieChart, BarChart, Tooltip)
+- **Icons**: Lucide React / Custom Inline SVGs
+- **Copying**: Clipboard API wrappers
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pankhai/
+├── public/
+│   ├── assets/
+│   │   └── naypankhlogo.png  # Official NayePankh Foundation Logo
+│   └── vercel.svg
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── send/          # Simulated email routes
+│   │   ├── auth/              # Supabase callback handlers
+│   │   ├── dashboard/         # Post-login Console layout & pages
+│   │   │   ├── analytics/     # Impact Analytics module
+│   │   │   ├── chatbot/       # Volunteer Chatbot assistant
+│   │   │   ├── directory/     # Members Directory lists
+│   │   │   └── generator/     # Outreach Copywriter workspace
+│   │   ├── login/             # Vibrant light-themed login portal
+│   │   ├── globals.css        # Core Tailwind configurations
+│   │   ├── layout.tsx         # Next.js global root layout
+│   │   └── page.tsx           # Product landing page
+│   └── lib/
+│       └── supabase/          # Supabase client declarations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+Make sure you have Node.js (v18.x or above) and npm installed.
 
-## Learn More
+### 1. Clone & Install Dependencies
+Navigate into the workspace and run:
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Environment Configurations
+Create a `.env` file in the project root:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_public_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Run Development Server
+Start the Next.js development server locally:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Build for Production
+To generate a production-optimized build:
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
