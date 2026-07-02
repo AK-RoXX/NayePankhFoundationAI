@@ -22,21 +22,6 @@ PankhAI bridges the gap between grassroots charity work, generative copywriting,
 
 ### 4. Members Directory
 - **Coordinator Board**: A listing directory mapping volunteer coordinates, registration IDs, assigned campaigns, and active statuses across operations in Kanpur, Ghaziabad, and Kanpur suburbs.
-
----
-
-## 🎨 Branding & Design Guidelines
-
-PankhAI's UI features a dual-theming layout:
-- **Public & Authentication Portal**: Implements a clean, vibrant, light theme styled in compliance with the visual identity of `https://nayepankh.com/`. Uses floating color blurs (`saffron` and `emerald`), white card glassmorphism panel styles, and features the official **NayePankh Logo** (`/assets/naypankhlogo.png`).
-- **Administrative Console (Post-Login Dashboard)**: Adopts a premium, high-density dark console interface focusing on data visual readability.
-- **Custom Footer**: Incorporates a branding footer outlining corporate contacts (`contact@nayepankh.com` / `+91-8318500748`), social SVG icons (Instagram, LinkedIn, YouTube, Facebook, X), and regulatory navigation lists.
-
-### Primary Color Assets
-- **Saffron/Orange (Primary Accent)**: `#F15B25` / `#F97316`
-- **Emerald/Green (Secondary Accent)**: `#10B981` / `#198754`
-- **Brand Blue**: `#1A82C3` / `#0A58CA`
-
 ---
 
 ## 🛠️ Tech Stack & Dependencies
