@@ -43,22 +43,6 @@ PankhAI bridges the gap between grassroots charity work, generative copywriting,
 ![Members Directory - Volunteers Tab](public/assets/volunteers.png)
 ![Members Directory - Donors Tab](public/assets/donors.png)
 
----
-
-## 🎨 Branding & Design Guidelines
-
-PankhAI's UI features a dual-theming layout:
-- **Public & Authentication Portal**: Implements a clean, vibrant, light theme styled in compliance with the visual identity of `https://nayepankh.com/`. Uses floating color blurs (`saffron` and `emerald`), white card glassmorphism panel styles, and features the official **NayePankh Logo** (`public/assets/naypankhlogo.png`).
-- **Administrative Console (Post-Login Dashboard)**: Adopts a premium, high-density dark console interface focusing on data visual readability.
-- **Custom Footer**: Incorporates a branding footer outlining corporate contacts (`contact@nayepankh.com` / `+91-8318500748`), social SVG icons (Instagram, LinkedIn, YouTube, Facebook, X), and regulatory navigation lists.
-
-### Primary Color Assets
-- **Saffron/Orange (Primary Accent)**: `#F15B25` / `#F97316`
-- **Emerald/Green (Secondary Accent)**: `#10B981` / `#198754`
-- **Brand Blue**: `#1A82C3` / `#0A58CA`
-
----
-
 ## 🛠️ Tech Stack & Dependencies
 
 - **Framework**: Next.js 15+ (App Router, Client & Server Components, Suspense boundary patterns)
@@ -126,6 +110,7 @@ Create a `.env` file in the project root:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_public_key
+GOOGLE_GENERATIVE_AI_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
 ### 3. Run Development Server
