@@ -1,8 +1,19 @@
-# PankhAI — NGO Campaign Coprocessor & Trust Budgeting Suite
+# <img src="public/assets/naypankhlogo.png" width="36" /> PankhAI — NGO Campaign Coprocessor & Trust Budgeting Suite
 
 PankhAI is a tailored administrative console and generative workspace designed for the volunteers and coordinators of **NayePankh Foundation** (a registered, tax-exempt NGO in India dedicated to uplifting underprivileged communities). 
 
 PankhAI bridges the gap between grassroots charity work, generative copywriting, and donor transparency by providing volunteers with a set of tools to craft campaigns, analyze budget trust models, interact with an AI volunteer assistant, and maintain coordinator directories.
+
+---
+
+## 📸 Visual Previews
+
+### Landing Page & Portal
+![Landing Page 1](public/assets/landingpage1.png)
+![Landing Page 2](public/assets/landingpage2.png)
+
+### Administrative Dashboard Overview
+![Administrative Dashboard Overview](public/assets/overview.png)
 
 ---
 
@@ -12,23 +23,32 @@ PankhAI bridges the gap between grassroots charity work, generative copywriting,
 - **Generative Copy Editor**: Allows coordinators to input target demographics (e.g. general public, corporate sponsors), select causes (e.g., child education, food drive, hygiene camp), choose a campaign tone (e.g., urgent, professional, inspiring), and instantly generate conversion-optimized fundraising copy.
 - **Copy Actions**: Copy generated results directly to clipboard or trigger mail-sender simulation tools.
 
+![Outreach Copywriting Generator](public/assets/generatortemplate.png)
+
 ### 2. Volunteer Support Chatbot
 - **Intelligent Assistant**: An interactive AI chat console designed to answer coordinator queries, guide donor relation calls, suggest marketing messaging strategy, and explain tax exemption benefits (e.g., Section 80G deductions under Indian Income Tax).
+
+![Volunteer Support Chatbot](public/assets/chatbot.png)
 
 ### 3. Impact Analytics & Transparency Engine
 - **Trust Budgeting Suite**: Enables volunteers to build public-facing transparent budget projections.
 - **Data Visualization**: Employs interactive charts (via Recharts) displaying transparency indicators, allocation splits (e.g., logistics vs. direct aid), and volunteer mobilization indicators.
 - **Clean Reports**: Provides breakdown matrices detailing how every single rupee donated directly impacts the target audience.
 
+![Impact Analytics & Transparency Engine](public/assets/impactanalysis.png)
+
 ### 4. Members Directory
 - **Coordinator Board**: A listing directory mapping volunteer coordinates, registration IDs, assigned campaigns, and active statuses across operations in Kanpur, Ghaziabad, and Kanpur suburbs.
+
+![Members Directory - Volunteers Tab](public/assets/volunteers.png)
+![Members Directory - Donors Tab](public/assets/donors.png)
 
 ---
 
 ## 🎨 Branding & Design Guidelines
 
 PankhAI's UI features a dual-theming layout:
-- **Public & Authentication Portal**: Implements a clean, vibrant, light theme styled in compliance with the visual identity of `https://nayepankh.com/`. Uses floating color blurs (`saffron` and `emerald`), white card glassmorphism panel styles, and features the official **NayePankh Logo** (`/assets/naypankhlogo.png`).
+- **Public & Authentication Portal**: Implements a clean, vibrant, light theme styled in compliance with the visual identity of `https://nayepankh.com/`. Uses floating color blurs (`saffron` and `emerald`), white card glassmorphism panel styles, and features the official **NayePankh Logo** (`public/assets/naypankhlogo.png`).
 - **Administrative Console (Post-Login Dashboard)**: Adopts a premium, high-density dark console interface focusing on data visual readability.
 - **Custom Footer**: Incorporates a branding footer outlining corporate contacts (`contact@nayepankh.com` / `+91-8318500748`), social SVG icons (Instagram, LinkedIn, YouTube, Facebook, X), and regulatory navigation lists.
 
@@ -47,6 +67,18 @@ PankhAI's UI features a dual-theming layout:
 - **Charts**: Recharts (ResponsiveContainer, PieChart, BarChart, Tooltip)
 - **Icons**: Lucide React / Custom Inline SVGs
 - **Copying**: Clipboard API wrappers
+
+---
+
+## 🗄️ Database Architecture
+
+PankhAI utilizes Supabase (PostgreSQL) for relational data storage and authentication. Below is the database schema design and table structures mapping volunteers, donors, and active campaigns:
+
+### Schema Diagram
+![Database Schema](public/assets/dbschema.png)
+
+### Table Configurations
+![Database Tables](public/assets/tables.png)
 
 ---
 
